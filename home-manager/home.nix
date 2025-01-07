@@ -42,6 +42,11 @@
     '';
   };
 
+  # swaylock
+  programs.swaylock = {
+    enable = true;
+  };
+
   # git + gh
   programs.git = {
     enable = true;

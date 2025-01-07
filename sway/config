@@ -61,6 +61,9 @@ output * bg /home/isaac/wallpapers/20240920ceramics03.jpg fill
 ### Key bindings
     bindsym $mod+Shift+x exec swaylock
 
+# Power menu
+    bindsym $mod+Alt+p exec /home/isaac/.config/sway/power_menu.sh
+
 # Screenshot controls
     ## Screenshot and copy to clipboard
     bindsym $mod+Shift+p exec grim -g "$(slurp -d)" - | wl-copy -t image/png
