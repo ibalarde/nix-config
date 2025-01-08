@@ -86,6 +86,9 @@
     fuzzel
     brightnessctl
     discord
+    gcc
+    cmake
+    gnumake
   ];
   
   services.tlp.enable = true;
