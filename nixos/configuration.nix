@@ -92,9 +92,26 @@
     gcc
     cmake
     gnumake
+    networkmanagerapplet
+    networkmanager-openconnect
   ];
   
   services.tlp.enable = true;
+  
+  services.syncthing = {
+    enable = true;
+    user = "isaac";
+    dataDir = "/home/isaac/";
+    configDir = "/home/isaac/.config/syncthing";
+    settings = {
+      devices = {
+        "MAIN-DESKTOP" = { id = "VTKCV3H-RDDH2ZC-KUED22V-RQ7YWZP-O5WDZFC-PYJW576-MZ5XZ3Y-N364OQT"; };
+      };
+    };
+  };
+
+  # mullvad
+  services.mullvad-vpn.enable = true;
 
   # Font stuff
   fonts.packages = with pkgs; [

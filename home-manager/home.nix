@@ -23,7 +23,9 @@
     signal-desktop
     obsidian
     onlyoffice-bin
+    python3Full
   ];
+
   # Neovim
   programs.neovim = {
     enable = true;
@@ -44,6 +46,14 @@
         filetype plugin indent on
         filetype plugin on
     '';
+  };
+  
+  # java env
+  programs.java.enable = true;
+
+  # zathura document reader
+  programs.zathura = {
+    enable = true;
   };
 
   # swaylock
