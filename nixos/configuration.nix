@@ -120,6 +120,8 @@
   # Font stuff
   fonts.packages = with pkgs; [
     nerd-fonts.droid-sans-mono
+    nerd-fonts.jetbrains-mono
+    font-awesome
   ];
 
   # Desktop environment stuff
