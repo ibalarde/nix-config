@@ -79,11 +79,11 @@ output * bg /home/isaac/wallpapers/20240920ceramics03.jpg fill
     bindsym XF86AudioMicMute wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 # Ricing
-default_border none
-gaps inner 5
-gaps outer 5
-corner_radius 10
-shadows enable
+    default_border none
+    gaps inner 5
+    gaps outer 5
+    corner_radius 10
+    shadows enable
 
 #
 # Basics:

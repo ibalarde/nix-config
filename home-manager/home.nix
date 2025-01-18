@@ -25,6 +25,11 @@
     onlyoffice-bin
     python3Full
   ];
+  
+  # Waybar
+  programs.waybar = {
+    enable = true;
+  };
 
   # Neovim
   programs.neovim = {

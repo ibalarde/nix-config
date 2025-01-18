@@ -109,6 +109,10 @@
       };
     };
   };
+  
+  # VirtualBox
+  virtualisation.virtualbox.host.enable = true;
+
 
   # mullvad
   services.mullvad-vpn.enable = true;
