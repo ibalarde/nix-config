@@ -42,7 +42,8 @@
     vimAlias = true;
     plugins = with pkgs.vimPlugins; [
         gruvbox-material
-        vim-closer
+        auto-pairs
+        nerdtree
     ];
     extraConfig = ''
         color gruvbox-material
