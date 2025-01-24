@@ -24,8 +24,11 @@
     obsidian
     onlyoffice-bin
     python3Full
+    nmap
+    tor-browser-bundle-bin
+    btop
   ];
-  
+
   # Waybar
   programs.waybar = {
     enable = true;
@@ -39,6 +42,7 @@
     vimAlias = true;
     plugins = with pkgs.vimPlugins; [
         gruvbox-material
+        vim-closer
     ];
     extraConfig = ''
         color gruvbox-material
@@ -103,8 +107,11 @@
   # Shell stuff
   programs.zsh = {
     enable = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
+    syntaxHighlighting.enable = true;
   };
+
   programs.starship = {
     enable = true;
   };

@@ -16,7 +16,7 @@
     enable = true;
     configurationLimit = 5;
   };
-
+  
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -96,8 +96,16 @@
     networkmanager-openconnect
   ];
   
-  services.tlp.enable = true;
-  
+  services.flatpak.enable = true;
+
+  powerManagement.enable = true;
+
+  services.thermald.enable = true;
+
+  services.tlp = {
+    enable = true;
+  };
+
   services.syncthing = {
     enable = true;
     user = "isaac";
@@ -107,15 +115,27 @@
       devices = {
         "MAIN-DESKTOP" = { id = "VTKCV3H-RDDH2ZC-KUED22V-RQ7YWZP-O5WDZFC-PYJW576-MZ5XZ3Y-N364OQT"; };
       };
+      folders = {
+        "General-share" = {
+            id = "msvhu-lacke";
+            path = "/home/isaac/general-share/";
+            devices = [ "MAIN-DESKTOP" ];
+        };
+      };
     };
   };
+
+  hardware.enableAllFirmware = true;
   
   # VirtualBox
   virtualisation.virtualbox.host.enable = true;
 
 
   # mullvad
-  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
 
   # Font stuff
   fonts.packages = with pkgs; [
