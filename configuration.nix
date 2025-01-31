@@ -63,7 +63,7 @@
   users.users.isaac = {
     isNormalUser = true;
     description = "isaac";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };
@@ -91,15 +91,15 @@
     gnumake
     networkmanagerapplet
     networkmanager-openconnect
+    fastfetch
+    gpclient
+    ouch
   ];
   
-  services.flatpak.enable = true;
-
   hardware.enableAllFirmware = true;
   
   # VirtualBox
   virtualisation.virtualbox.host.enable = true;
-
 
   # mullvad
   services.mullvad-vpn = {
@@ -112,6 +112,7 @@
     nerd-fonts.droid-sans-mono
     nerd-fonts.jetbrains-mono
     font-awesome
+    liberation_ttf
   ];
 
   # Desktop environment stuff
