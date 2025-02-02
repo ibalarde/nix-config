@@ -63,7 +63,7 @@
   users.users.isaac = {
     isNormalUser = true;
     description = "isaac";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
+    extraGroups = [ "networkmanager" "wheel" "vboxusers" "adbusers" ];
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };
@@ -97,6 +97,9 @@
   ];
   
   hardware.enableAllFirmware = true;
+
+  # ADB
+  programs.adb.enable = true;
   
   # VirtualBox
   virtualisation.virtualbox.host.enable = true;
