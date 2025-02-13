@@ -10,6 +10,7 @@
       /etc/nixos/hardware-configuration.nix
       <home-manager/nixos>
       ./services
+      ./desktop
     ];
 
   # Bootloader.

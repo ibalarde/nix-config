@@ -44,7 +44,7 @@
         gruvbox-material
         auto-pairs
         nerdtree
-
+        
     ];
     extraConfig = ''
         color gruvbox-material
