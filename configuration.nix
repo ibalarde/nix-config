@@ -95,6 +95,7 @@
     fastfetch
     gpclient
     ouch
+    yarg
   ];
   
   hardware.enableAllFirmware = true;
