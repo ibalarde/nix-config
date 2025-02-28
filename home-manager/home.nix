@@ -44,7 +44,10 @@
         gruvbox-material
         auto-pairs
         nerdtree
-        
+        coc-nvim
+        coc-clangd
+        barbar-nvim
+        nvim-web-devicons
     ];
     extraConfig = ''
         color gruvbox-material
@@ -56,11 +59,22 @@
         set expandtab
         filetype plugin indent on
         filetype plugin on
+        
+        map <F1> :NERDTree<CR> 
     '';
   };
   
   # java env
   programs.java.enable = true;
+
+  programs.foot = {
+    enable = true;
+    settings = {
+        main = {
+          font = "size=11";
+        };
+    };
+  };
 
   # zathura document reader
   programs.zathura = {

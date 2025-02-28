@@ -71,6 +71,9 @@
   programs.zsh.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-runtime-7.0.20"
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -95,7 +98,10 @@
     fastfetch
     gpclient
     ouch
-    yarg
+    nodejs_23
+    clang-tools
+    vintagestory
+    remmina
   ];
   
   hardware.enableAllFirmware = true;
@@ -118,6 +124,7 @@
     nerd-fonts.jetbrains-mono
     font-awesome
     liberation_ttf
+    fira-code
   ];
 
   # Desktop environment stuff
