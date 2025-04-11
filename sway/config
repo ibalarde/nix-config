@@ -58,6 +58,11 @@ output * bg /home/isaac/wallpapers/20240920ceramics03.jpg fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input type:touchpad {
+    dwt disabled
+    tap enabled
+}
+
 ### Key bindings
     bindsym $mod+Shift+x exec swaylock
 

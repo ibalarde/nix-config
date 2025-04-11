@@ -27,6 +27,10 @@
     nmap
     tor-browser-bundle-bin
     btop
+    ncspot
+    pyright
+    prismlauncher
+    ranger
   ];
 
   # Waybar
@@ -46,6 +50,8 @@
         nerdtree
         coc-nvim
         coc-clangd
+        coc-pyright
+        coc-html
         barbar-nvim
         nvim-web-devicons
     ];

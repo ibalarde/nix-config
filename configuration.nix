@@ -21,6 +21,8 @@
   
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   networking.hostName = "nixlaptop"; # Define your hostname.
 
   # Garbage collection
@@ -64,7 +66,7 @@
   users.users.isaac = {
     isNormalUser = true;
     description = "isaac";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" "vboxusers" "adbusers" "dialout" ];
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };
@@ -102,9 +104,14 @@
     clang-tools
     vintagestory
     remmina
+    rustup
+    libbsd
+    ntfs3g
   ];
   
   hardware.enableAllFirmware = true;
+
+
 
   # ADB
   programs.adb.enable = true;
